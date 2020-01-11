@@ -22,10 +22,12 @@ function submitData(name, email) {
     return response.json();
   })
   .then(function(object) {
-    console.log(object);
+    newSection.innerHTML = object.id;
+    pageBody.appendChild(newSection);
+    return object;
   })
   .catch(function(error) {
-    alert("Bad things! Ragnarők!");
-    console.log(error.message);
+    newSection.innerHTML = error.message;
+    pageBody.appendChild(newSection);
   });
 }
