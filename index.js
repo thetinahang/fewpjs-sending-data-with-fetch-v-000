@@ -17,7 +17,7 @@ function submitData(name, email) {
   let pageBody = document.querySelector("body")
   let newSection = document.createElement("div")
 
-  return fetch("http://localhost:3000/dogs", configObj)
+  return fetch("http://localhost:3000/users", configObj)
   .then(function(response) {
     return response.json();
   })
